@@ -1,3 +1,19 @@
+body {
+    max-width: 50%;
+}
+
 h1{
     text-align: center;
+}
+
+#add-employee-button {
+    float: right;
+}
+
+input {
+    max-width: 15%;
+}
+
+table {
+    padding:20px;
 }
