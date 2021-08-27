@@ -4,11 +4,11 @@
 
 Website that allows users to input or delete employee information to a table and calculates total monthly salary for all employees
 
-- [] HTML Table with Placeholder Data
-- [] Five input fields to collect data
-- [] Button click that logs to the console
-- [] Assign input to variables
-- [] Create a function that appends our data to the HTML table
+- [x] HTML Table with Placeholder Data
+- [x] Five input fields to collect data
+- [x] Button click that logs to the console
+- [x] Assign input to variables
+- [x] Create a function that appends our data to the HTML table
 - [] Global variable for monthly costs
 - [] Logic to calculate and display calculated salary
 - [] Style the table
