@@ -17,6 +17,19 @@ function addEmployee(){
     <td>${lastName}</td>
     <td>${employeeID}</td>
     <td>${employeeTitle}</td>
-    <td>${employeeSalary}</td>`)
+    <td>${employeeSalary}</td>
+    <td><button id="delete-employee">Delete</button></td>`)
+    $('#monthly-costs').empty()
+    totalSalary+= parseInt(employeeSalary); //converts employee salary from string to number
+    $('#monthly-costs').append(`Total Monthly Costs ${totalSalary}`);
 }
+totalSalary = 0;
+
+//gunction calculateCosts() {
+   // console.log($(this));
+    //totalSalary ++;
+
+    //totalSalary+= $(this).parent(employeeSalary);
+    //$('#monthly-costs').append(`$${totalSalary}`);
+//}
 

@@ -9,8 +9,8 @@ Website that allows users to input or delete employee information to a table and
 - [x] Button click that logs to the console
 - [x] Assign input to variables
 - [x] Create a function that appends our data to the HTML table
-- [] Global variable for monthly costs
-- [] Logic to calculate and display calculated salary
+- [x] Global variable for monthly costs
+- [x] Logic to calculate and display calculated salary
 - [] Style the table
 - [] Logic for background color on the monthly costs
 - [] Delete button that removes a row
