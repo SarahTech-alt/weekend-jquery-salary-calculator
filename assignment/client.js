@@ -32,4 +32,3 @@ totalSalary = 0;
     //totalSalary+= $(this).parent(employeeSalary);
     //$('#monthly-costs').append(`$${totalSalary}`);
 //}
-
