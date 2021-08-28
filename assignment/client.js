@@ -28,7 +28,7 @@ function addEmployee(){
     <td>${employee.employeeID}</td>
     <td>${employee.employeeTitle}</td>
     <td>${employee.employeeSalary}</td>
-    <td><button class="delete-employee">Delete</button></td>`)
+    <td><button class="delete-employee" id = "id${employee.employeeID}">Delete</button></td>`)
     $('#monthly-cost-value').empty()
     totalSalary+= parseInt(employee.employeeSalary); //converts employee salary from string to number
     $('#monthly-cost-value').append(`${totalSalary}`);
