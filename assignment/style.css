@@ -17,3 +17,11 @@ input {
 table {
     padding:20px;
 }
+
+#monthly-cost-label {
+    display: inline;
+}
+
+#monthly-cost-value {
+    display:inline;
+}
