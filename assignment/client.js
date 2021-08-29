@@ -32,9 +32,15 @@ function addEmployee(){
     console.log(document.getElementsByClassName(`${employee.employeeID}`)); // testing accessing row
     $('#monthly-cost-value').empty()
     totalSalary+= parseInt(employee.employeeSalary); //converts employee salary from string to number
-    $('#monthly-cost-value').append(`${totalSalary}`);
-    $('.delete-employee').on('click', deleteEmployee)
+    let monthlyCost = Math.round(totalSalary/12);
+    $('#monthly-cost-value').append(`${monthlyCost}`);
+    $('.delete-employee').on('click', deleteEmployee);
+    if (monthlyCost > 20000){
+        $('#monthly-cost-value').css('background-color','red');
+    }
 }
+
+
 totalSalary = 0;
 
 //gunction calculateCosts() {
@@ -46,6 +52,10 @@ totalSalary = 0;
 //}
 
 function deleteEmployee(){
-    let employeeRow = $(this).parent();
-    employeeRow.empty();
+    // let employeeRow = $(this).parent();
+    // employeeRow.empty();
+    let row = $(this).parent().parent();
+    row.empty();
+    employeeArray.pop(row);
+    // hasID(`${employee.employeeID}`)
 }
