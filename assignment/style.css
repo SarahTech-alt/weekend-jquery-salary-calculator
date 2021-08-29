@@ -6,23 +6,26 @@ h1{
     text-align: center;
 }
 
-#submit-placement {
-    display: flex;
-}
-
 #input-fields {
     column-count: 1;
+    min-width: 100%;
 }
 
-#submit-button {border-radius: 12px;
-    float:right;
+#submit-button {
+    border-radius: 12px;
+    width: 100px;
+    flex-direction: column;
+    position: absolute;   
 }
 
 .delete-employee{
     border-radius: 12px;
+    width: auto;
 }
 
-
+#monthly-cost {
+    border-top: 100px;
+}
 
 #monthly-cost-label {
     display: inline;
@@ -32,9 +35,18 @@ h1{
     display:inline;
 }
 
-#id1234 {
-background-color: aqua;
-}
-
 /* Base styles from w3schools */
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: left;
+}
+
+table {
+    margin-top:10px;
+    border: 1px solid black;
+    min-width: 100%;
+    border-spacing: 0;
+}

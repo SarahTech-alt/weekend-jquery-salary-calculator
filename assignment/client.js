@@ -20,6 +20,8 @@ function createEmployee(){
     addEmployee();
 }
 
+totalSalary = 0;
+
 function addEmployee(){
     let employee = employeeArray[employeeArray.length-1] //references the last employee added
     $('#employee-table').append(`<tr id = "${employee.employeeID}"> 
@@ -27,29 +29,18 @@ function addEmployee(){
     <td>${employee.lastName}</td>
     <td>${employee.employeeID}</td>
     <td>${employee.employeeTitle}</td>
-    <td>${employee.employeeSalary}</td>
+    <td>$${employee.employeeSalary}</td>
     <td><button class="delete-employee" id = "${employee.employeeID}">Delete</button></td>`) // creates a table row with and id of the employee id number for future referencing
-    console.log(document.getElementsByClassName(`${employee.employeeID}`)); // testing accessing row
+    //console.log(document.getElementsByClassName(`${employee.employeeID}`)); // testing accessing row
     $('#monthly-cost-value').empty()
     totalSalary+= parseInt(employee.employeeSalary); //converts employee salary from string to number
     let monthlyCost = Math.round(totalSalary/12);
-    $('#monthly-cost-value').append(`${monthlyCost}`);
-    $('.delete-employee').on('click', deleteEmployee);
+    $('#monthly-cost-value').append(`$${monthlyCost}`);
     if (monthlyCost > 20000){
         $('#monthly-cost-value').css('background-color','red');
+        $('.delete-employee').on('click', deleteEmployee);
     }
 }
-
-
-totalSalary = 0;
-
-//gunction calculateCosts() {
-   // console.log($(this));
-    //totalSalary ++;
-
-    //totalSalary+= $(this).parent(employeeSalary);
-    //$('#monthly-costs').append(`$${totalSalary}`);
-//}
 
 function deleteEmployee(){
     // let employeeRow = $(this).parent();

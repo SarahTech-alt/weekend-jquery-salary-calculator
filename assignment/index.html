@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div class = "container">
     <h1>Salary Calculator</h1>
     <hr>
     <div id = "input-fields">
@@ -20,9 +21,6 @@
     <input id="employeeID" type="number" placeholder="ID" />
     <input id="employee-title" type="text" placeholder="Title" />
     <input id="annual-salary" type="number" placeholder="Annual Salary" />
-    <br>
-    </div>
-    <div id="submit-placement">
     <button class = "round" id="submit-button">Submit</button>
     </div>
     <br>
@@ -31,16 +29,20 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Employee ID</th>
                 <th>Title</th>
                 <th>Annual Salary</th>
-
             </tr>
         </thead>
         <tbody id="employee-table">
         </tbody>
     </table>
-    <h2 id="monthly-cost-label">Total Monthly Costs</h2>
-    <h2 id="monthly-cost-value">Money</h2>
+    <br>
+    <div id = "monthly-cost">
+    <h2 id="monthly-cost-label">Total Monthly Costs:</h2>
+    <h2 id="monthly-cost-value"></h2>
+    </div>
+    </div>
 </body>
 
 </html>
