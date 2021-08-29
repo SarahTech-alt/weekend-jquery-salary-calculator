@@ -1,22 +1,28 @@
 body {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 h1{
     text-align: center;
 }
 
-#submit-button {
-    float: right;
+#submit-placement {
+    display: flex;
 }
 
-input {
-    max-width: 15%;
+#input-fields {
+    column-count: 1;
 }
 
-table {
-    padding:20px;
+#submit-button {border-radius: 12px;
+    float:right;
 }
+
+.delete-employee{
+    border-radius: 12px;
+}
+
+
 
 #monthly-cost-label {
     display: inline;
@@ -29,3 +35,6 @@ table {
 #id1234 {
 background-color: aqua;
 }
+
+/* Base styles from w3schools */
+tr:nth-child(even) {background-color: #f2f2f2;}
