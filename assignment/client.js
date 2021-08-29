@@ -22,13 +22,14 @@ function createEmployee(){
 
 function addEmployee(){
     let employee = employeeArray[employeeArray.length-1] //references the last employee added
-    $('#employee-table').append(`<tr>
+    $('#employee-table').append(`<tr id = "${employee.employeeID}"> 
     <td>${employee.firstName}</td>
     <td>${employee.lastName}</td>
     <td>${employee.employeeID}</td>
     <td>${employee.employeeTitle}</td>
     <td>${employee.employeeSalary}</td>
-    <td><button class="delete-employee" id = "id${employee.employeeID}">Delete</button></td>`)
+    <td><button class="delete-employee" id = "${employee.employeeID}">Delete</button></td>`) // creates a table row with and id of the employee id number for future referencing
+    console.log(document.getElementsByClassName(`${employee.employeeID}`)); // testing accessing row
     $('#monthly-cost-value').empty()
     totalSalary+= parseInt(employee.employeeSalary); //converts employee salary from string to number
     $('#monthly-cost-value').append(`${totalSalary}`);
@@ -45,5 +46,6 @@ totalSalary = 0;
 //}
 
 function deleteEmployee(){
-    console.log('hey there');
+    let employeeRow = $(this).parent();
+    employeeRow.empty();
 }
