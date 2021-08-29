@@ -36,17 +36,19 @@ function addEmployee(){
     totalSalary+= parseInt(employee.employeeSalary); //converts employee salary from string to number
     let monthlyCost = Math.round(totalSalary/12);
     $('#monthly-cost-value').append(`$${monthlyCost}`);
+    $('.delete-employee').on('click', deleteEmployee);
     if (monthlyCost > 20000){
         $('#monthly-cost-value').css('background-color','red');
-        $('.delete-employee').on('click', deleteEmployee);
     }
 }
 
+
 function deleteEmployee(){
+    console.log(employeeArray); //checking contents of employee array
     // let employeeRow = $(this).parent();
     // employeeRow.empty();
     let row = $(this).parent().parent();
     row.empty();
-    employeeArray.pop(row);
+    //employeeArray.pop(row);
     // hasID(`${employee.employeeID}`)
 }
