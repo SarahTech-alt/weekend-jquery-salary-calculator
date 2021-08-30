@@ -36,10 +36,11 @@ function addEmployee(){
     totalSalary+= parseInt(employee.employeeSalary); //converts employee salary from string to number
     let monthlyCost = Math.round(totalSalary/12);
     $('#monthly-cost-value').append(`$${monthlyCost}`);
-    $('.delete-employee').on('click', deleteEmployee);
+   
     if (monthlyCost > 20000){
         $('#monthly-cost-value').css('background-color','red');
     }
+    $('.delete-employee').unbind().click(deleteEmployee); // from https://stackoverflow.com/questions/14969960/jquery-click-events-firing-multiple-times unbind removes prior event handlers from elements https://api.jquery.com/unbind/
 }
 
 
@@ -49,6 +50,7 @@ function deleteEmployee(){
     // employeeRow.empty();
     let row = $(this).parent().parent();
     row.empty();
-    //employeeArray.pop(row);
+    //employeeArray.shift(row);
+    //employeeArray.pop(row); //removes last element of employeeArray
     // hasID(`${employee.employeeID}`)
 }
